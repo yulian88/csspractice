@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css?family=Dokdo|Raleway');
+
+:root {
+    --primary-color: black;
+    --secondary-color: white;
+    font-family: 'Raleway', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: 800px;
+    margin: auto;
+
+}
+
+h1,
+h2,
+h3,
+p,
+div,
+nav,
+section,
+main {
+    margin: 0;
+    padding: 0;
+}
+
+header .logo {
+    text-align: center;
+    font-family: 'Dokdo', cursive;
+    font-size: 3.5rem;
+}
+
+header nav ul {
+    display: flex;
+    padding: 0;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+
+header nav ui li a:hover {
+    text-decoration: underline;
+}
+
+@media(min-width: 500px) {
+    header nav {
+        display: flex;
+    }
+    header nav ul {
+        flex: 1;
+    }
+}
+
+header .banner {
+    background-image: url(images/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 465px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header .banner h1 {
+    color: var(--secondary-color);
+    font-size: 4rem;
+    font-family: 'Dokdo', cursive;
+    margin-bottom: 40px;
+}
+
+main .product-list .product-card img {
+    display: block;
+    width: 100%;
+}
+
+main .product-list .product-card .button-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+main .product-list .product-card h3,
+main .product-list .product-card p {
+    padding: 0 5px;
+}
+
+.main .product-list {
+    display: grid;
+}
+
+@media (min-width: 500px) {
+
+    main .product-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2px;
+    }
+}
+
+@media(min-width:660px) {
+    main .product-list {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 2px;
+    }
+}
+
+.btn {
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #ccc;
+    border-radius: 0.6em;
+    color: #ccc;
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px;
+    padding: 1.2em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.btn:hover,
+.btn:focus {
+    color: white;
+    outline: 0;
+}
+
+.btn-shop {
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+.btn-shop:hover {
+    box-shadow: 0 0 40px 40px #ccc inset;
+}
+
+.btn-card {
+    padding: 0.5em 0.8em;
+}
